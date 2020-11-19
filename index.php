@@ -51,7 +51,7 @@ $encodedKeyboard = json_encode($keyboard);
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
 $response = curl_exec($curl);
-
+echo "Start Message Has Been Sent To $fullname";
 
 }
 
@@ -73,6 +73,7 @@ $output = curl_exec($ch);
 $json1 = json_decode($output,true);
 curl_close($ch);
 echo $output;
+	echo "$fullname User Info Is Sent To Him ";
 }
 
 elseif ($text == '/stats') {
